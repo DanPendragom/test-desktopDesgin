@@ -1,0 +1,225 @@
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('./assets/fonts/opensans-extrabold-webfont.woff2') format('woff2'),
+        url('./assets/fonts/opensans-extrabold-webfont') format('woff');
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+        url('./assets/fonts/opensans-regular-webfont.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: OpenSans;
+    
+}
+
+body {
+    display: flex;
+    flex: 1;
+    background-color: #000;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 32vh;
+    align-self: flex-end;
+    overflow: hidden;
+    position: relative;
+}
+
+#header-curve {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.title-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    top: 0;
+    height: 32vh;
+    position: absolute;
+}
+.title-header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    background-color: white;
+    border-radius: 100%;
+    border: 2px dotted black;
+    
+}
+.title-header div>div{
+    width: 47px;
+    height: 47px;
+    background-color: black;
+    border-radius: 100%;
+    border: 2px dotted black;
+}
+.title-header h1{
+    margin-left: 20px;
+    font-family: OpenSans-Bold;
+    font-size: 77px;
+}
+
+main {
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    flex-direction: row;
+}
+
+header h1 {
+    font-weight: bolder;
+    color: black;
+}
+
+section {
+    width: 55%;
+    flex-direction: column;
+}
+
+section h1 {
+    font-size: 55px;
+    font-weight: lighter;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.section-container .info {
+    width: 60%;
+}
+
+.info p, h3 {
+    padding-bottom: 15px;
+}
+
+.info p {
+    font-size: 14px;
+}
+.info-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.section-container .img {
+    width: 30%;
+    height: auto;
+    margin: 0 20px;
+    background-image: url("./assets/images/phone.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+aside div.card {
+    position: relative;
+    z-index: 1;
+    background-color: #FFF;
+    border-radius: 0 30%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card .img-round {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-image: url("./assets/images/people-01.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+
+div.card p {
+    padding: 0 15px;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+}
+
+div.card p:nth-child(2) {
+    opacity: 0.5;
+}
+
+div.card p:nth-child(3) {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 10px;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 71%;
+    bottom: 0;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: -9999;
+}
+
+footer div:first-child {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding: 12px 0;
+    
+}
+
+footer div ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer div ul li {
+    font-weight: bolder;
+    margin: 25px 20px;
+}
+div.clip-content{
+    position: relative;
+    overflow: hidden;
+}
+
+.clip-content img{
+    width: 550px;
+    height: 100px;
+    position: absolute;
+    bottom: -650px;
+    right: 0px;
+}
+
+.clip-content::before{
+    content: url("./assets/images/logo.png");
+    width: 300px;
+    position: absolute;
+    bottom: -700px;
+    right: 300px;
+    z-index: -1;
+}
